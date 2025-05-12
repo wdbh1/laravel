@@ -1,11 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DishController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/hello', function () {
-    return view('hello', ['title' => 'Hello world!']);
-});
-
+Route::resource('categories', CategoryController::class);  // Добавит все необходимые маршруты для CategoryController
+Route::resource('dishes', DishController::class);   // Добавит все необходимые маршруты для DishControllerphp artisan route:cache
