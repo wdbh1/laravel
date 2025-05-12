@@ -11,15 +11,6 @@
 
 <p>Категория: {{ $dish->category->name }}</p> <!-- Выводим категорию блюда -->
 
-<h2>Ингредиенты:</h2>
-@if($ingredients->count() > 0)
-    <ul>
-        @foreach ($ingredients as $ingredient)
-            <li>{{ $ingredient->name }} ({{ $ingredient->pivot->quantity }} {{ $ingredient->unit }})</li>
-        @endforeach
-    </ul>
-@else
-    <p>Нет ингредиентов.</p>
-@endif
+
 </body>
 </html>
