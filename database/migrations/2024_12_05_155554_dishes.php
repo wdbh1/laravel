@@ -27,6 +27,6 @@ Schema::create('dishes', function (Blueprint $table) {
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('dishes');
     }
 };
