@@ -14,7 +14,7 @@ return new class extends Migration
 Schema::create('ingredients', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
-            $table->string('unit', 50); // Единицы измерения
+            $table->string('unit', 50);
             $table->timestamps();
         });
     }

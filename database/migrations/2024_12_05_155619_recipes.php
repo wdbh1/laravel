@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('dish_id');
             $table->unsignedBigInteger('ingredient_id');
-            $table->decimal('quantity', 10, 2); // Количество с плавающей точкой
+            $table->decimal('quantity', 10, 2);
             $table->timestamps();
             $table->foreign('dish_id')->references('id')->on('dishes')->onDelete('cascade');
             $table->foreign('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade');

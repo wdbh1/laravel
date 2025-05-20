@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];  // Разрешить массовое присвоение
+    protected $fillable = ['name'];
 
     public function dishes()
     {
