@@ -48,6 +48,6 @@ class User extends Authenticatable
     }
     public function isAdmin(): bool
     {
-        return $this->email === 'aleksandr@mail.ru';  //  Замените на e-mail администратора
+        return $this->email === 'aleksandr@mail.ru';
     }
 }
