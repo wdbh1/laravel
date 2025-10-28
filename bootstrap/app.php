@@ -21,6 +21,13 @@ return Application::configure(basePath: dirname(__DIR__))
             'auth:sanctum' => \Laravel\Sanctum\Http\Middleware\Authenticate::class,
         ]);
 
+        // Отключаем CSRF проверку для API маршрутов
+        $middleware->validateCsrfTokens(except: [
+            'api/*',
+            'sanctum/*',
+            'login',
+            'logout'
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
