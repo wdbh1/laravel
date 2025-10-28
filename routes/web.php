@@ -17,3 +17,4 @@ Route::get('/test-destroy', function () {
 Route::get('/home', function () {
     return view('home');
 })->name('home')->middleware('auth');
+Route::post('/api/login', [App\Http\Controllers\AuthController::class, 'login']);
